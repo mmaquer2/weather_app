@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #ECECEC;
+    }
+
+
+
+
+
+form {
+
+    display:inline-block;
+    background-color: white ;
+    padding: 70px 50px;
+    
+    color:black;
+}
+
+header {
+
+font-weight:bold;
+background-color: #36454f ;
+color:white;
+}
+
+
+footer {
+position:relative;
+z-index:501;
+clear:both;
+left: 0;
+bottom: 0;
+width: 100%;
+padding: 2rem;
+font-weight: bold;
+background-color: #36454f ;
+color:white;
+}
+
+.res {
+
+    display: none;
+}
+
+
+
+
+
+  /*media queries for responsiveness */
+  
+  /* Portrait and Landscape */
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+  }
+  
+  /* Portrait */
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  }
+  
+  /* Landscape */
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  
+  }
+
+
+  
