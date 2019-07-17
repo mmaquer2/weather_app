@@ -4,44 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Forcast</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>5 Day Weather</title>
-    <script src ="app.js"></script>
     <link rel="stylesheet" href = "style.css">
+    
+    <script src="app.js"></script>
 
 </head>
+
 <body>
- <header id="Head">
-    <h1>Weather App</h1>
- </header>   
- <br>
- <div id="section-display">
 
+<div class id ="container">
+<header><h1>Weather App. io</h1> 
+<br>
+<p></p>
+</header>
+<main>
 
+<div class ="box1">
+  
+<form> 
+<div style="width: 500px; text-align: center"class="input-group input-group-sm mb-3 center">
+        <div  class="input-group-prepend">
+          <span class="input-group-text"  id="inputGroup-sizing-sm" >Search by your 5 digit Zip Code</span>
+        </div>
+        <input type="text" id ="zip" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="22152">
+      </div>
 
- <main id="main">
-    <form id="">
-        <input type="text" placeholder="22152" id="">
-        <button value = "search" onclick="disp()">  Search </button>
-
+    
+          <button type ="button" class="btn btn-primary" onclick="disp()" >Search</button>
+          <br>
+          <br>
+          <button class="btn btn-primary" type ="button" onclick="reset()"> Try a New Search </button>
+        </div>
         
+     
+      </form>
+        </div>
+<br>
+<div class = "box2">
+<div class = "res" id = "results" >
 
-    </form>
+    <p>test test test</p>
+  
+
+
+</div>
 </div>
 
-<div class ="res" id="results">
-
-    <p>tst</p>
-    
-    </div>
+</main>
 
 
- </main>
-
- <footer id="footer">
-
-    <p>Created by Mike Maquera, 2019. </p>
-
- </footer>
+<footer> 
+    <p>Data From Open Weather Map dot com </p>  
+    <br>    
+<a href ="##"> Created By Mike Maquera, 2019.</a>
+<br>
+</footer>
+</div>
 </body>
+
 </html>
