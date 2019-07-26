@@ -16,6 +16,11 @@
 
 //4.display 5 day weather and content on webpage
 
+
+
+
+
+
 //get search info
 
 //const rad = document.getElementById('radius').value
