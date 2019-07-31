@@ -7,6 +7,26 @@
 //2. fetch api data from weather map
 
 
+const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
+async function test() {
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+    data.forEach((element) => {
+      console.log(element.name)
+      console.log(element.street)
+      console.log(element.city)
+      console.log(element.state)
+      console.log(element.postal_code)
+
+
+
+  })
+  .catch(error => console.error(error))
+
+
+}
 
 //3. change background color based on weather or current forecast
     //if weather is sunny page = yellow sun animation 
@@ -28,37 +48,6 @@
 //const city = document.getElementById('city_state').value
 //const postal = document.getElementById('zip').value
 
-
-
-//basic fetch request
-
-//const url = ( 'https://api.openbrewerydb.org/breweries/search?query=Denver&per_page=2')
-//async function getData() {
-   // const response = await fetch(url);
-   //const data = await response.json();
-
-   // data.forEach((element) => {
-     //   console.log(element.name)
-        //console.log(element.id)
-      //  console.log(element.street)
-      ///  console.log(element.city)
-       // console.log(element.state)
-       // console.log(element.postal_code)
-        
-
-        
-        //var names =(element.name);
-        //var zip = (element.postal_code)
-        
-       // document.getElementById('disp_name').textContent = names;
-       // document.getElementById('disp_zip').textContent = zip;
-       
-   // });
-
-  //  return data.map(function(results) {
-
-
-   // }
     
 
  function reset() {
@@ -76,8 +65,6 @@ else if ( show.style.display = 'block' ) {
 
     show.style.display ='none'
 }
-
-//document.getElementById('results').style.display='block';
 
 }
 
