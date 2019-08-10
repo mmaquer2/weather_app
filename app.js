@@ -16,37 +16,37 @@ output.innerHTML = "test data here"
 }
 
 
-function RetrieveData() {
+function data_test() {
 
-const state = document.getElementById('state').value
-const city = document.getElementById('cit').value
+//const state = document.getElementById('state').value
+//const city = document.getElementById('cit').value
 const postal = document.getElementById('zip').value
-const search_url =("")
-
+alert(postal)
 
 }
+
+
 const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
-async function test() {
+async function test_get() {
 
-  const response = await fetch(url);
-   const data = await response.json();
+//const state = document.getElementById('state').value
+//const city = document.getElementById('cit').value
+//const postal = document.getElementById('zip').value
+//const city_name = document.getElementById('zip').value    
 
-   console.log(data.main.temp)
-   console.log(data.main.humidity)
-
-   console.log(data.weather[0].main)
-   console.log(data.weather[0].description)
 
     
-   //activates creative weather front end animations 
+    const response = await fetch(url);
+    const data = await response.json();
+
+        console.log(data.main.temp)
+        console.log(data.main.humidity)
+
+        console.log(data.weather[0].main)
+        console.log(data.weather[0].description)
+        console.log(data.name)
+
    
-   
-
-  // for( var i = 0; i < data.length; i++ ) {
-       //     console.log(data.main)
-
-   //}
-
    
     //results and output template based on the search results of the user
 
@@ -57,50 +57,76 @@ async function test() {
 
    //var test = document.getElementById('output');
 
-   output.innerHTML = "test data here"
+   //output.innerHTML = "test data here"
+   output_name.innerHTML = data.name
+   output_temp.innerHTML = data.main.temp
+   output_hum.innerHTML = data.main.humidity
+   output_main.innerHTML = data.weather[0].main
 
+     
+   //activates creative weather front end animations 
+   
 
     
-   VisualWeather() 
+   VisualWeather_test() 
 
       
 
 }
 
 
+ function VisualWeather_test () {
+    document.body.style.backgroundColor = "skyblue";
+    document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     
-function VisualWeather() {
 
 
-        document.body.style.backgroundColor = "skyblue";
+ }
+
+
+    
+/*function VisualWeather() {
+
+
+        //if statement based on value of weather_temp
+            if(data.weather [0].main = "sunny") {
+            document.body.style.backgroundColor = "skyblue";
+            //<i class="fas fa-sun"></i>
+
+        }
+        elseif(data.weather [0].main = "cloudy") {
+            document.body.style.backgroundColor = "lightgrey";
+            //<i class="fas fa-cloud"></i>
        
 
-        //icons for weather types:
+        }
+        elseif(data.weather [0].main = "rain") {
+            document.body.style.backgroundColor = "lightgrey";
+            //<i class="fas fa-cloud-showers-heavy"></i>
+       
 
-        //sunny
+        }
+        elseif (data.weather [0].main = "snow") {
+            document.body.style.backgroundColor = "lightgrey";
+            //<i class="far fa-snowflake"></i>
+       
 
-        //<i class="fas fa-sun"></i>
-        //document.body.style.backgroundColor = "skyblue";
+        }
 
-        //cloudy
-
-        //<i class="fas fa-cloud"></i>
-        //document.body.style.backgroundColor = "skyblue";
-
-
-        //rain
-
-        //<i class="fas fa-cloud-showers-heavy"></i>
-
-        //snow
-
-        //<i class="far fa-snowflake"></i>
-
-        //thunderstorm
-
+        elseif (data.weather [0].main = "storm") {
+            document.body.style.backgroundColor = "lightgrey";
+            
         //<i class="fas fa-bolt"></i>
+       
+
+        }
+
+
+
+        
+
       
-}
+//} */
 
 
 

@@ -36,31 +36,35 @@
         <input type="text" id ="zip" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="22152">
       </div>
 
+      <div  class="input-group-prepend">
+          <span class="input-group-text"  id="inputGroup-sizing-sm" >Search by your City Name</span>
+        </div>
+        <input type="text" id ="city" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="Springfield">
+      </div>
+
+      
+
     
-          <button type ="button" class="btn btn-primary" onclick="test()" >Search</button>
+          <button type ="button" class="btn btn-primary" onclick="test_get()"> Search</button>
           <br>
           <br>
-          <button class="btn btn-primary" type ="button" onclick="output_test()"> Try a New Search </button>
+          <button class="btn btn-primary" type ="button" onclick="data_test()"> Try a New Search </button>
         </div>
         
      
       </form>
         </div>
 <br>
-<div class = "box2">
-<div class = "res" id = "results" >
 
-    <p>test test test</p>
-  
-
-
-</div>
-</div>
 
 <div class = "results">
 
+<p id ="output_name">  </p>
+<p id ="output_temp">  </p>
+<p id ="output_hum">  </p>
+<p id ="output_des">  </p>
+<p id ="output_main">  </p>
 
-<p id ="output">  </p>
 
 
 </div>
