@@ -7,46 +7,102 @@
 //2. fetch api data from weather map
 
 
+function output_test() {
+
+var test = document.getElementById('output');
+
+output.innerHTML = "test data here"
+
+}
+
+
+function RetrieveData() {
+
+const state = document.getElementById('state').value
+const city = document.getElementById('cit').value
+const postal = document.getElementById('zip').value
+const search_url =("")
+
+
+}
 const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
 async function test() {
 
   const response = await fetch(url);
-  const data = await response.json();
+   const data = await response.json();
 
-    data.forEach((element) => {
-      console.log(element.name)
-      console.log(element.street)
-      console.log(element.city)
-      console.log(element.state)
-      console.log(element.postal_code)
+   console.log(data.main.temp)
+   console.log(data.main.humidity)
+
+   console.log(data.weather[0].main)
+   console.log(data.weather[0].description)
+
+    
+   //activates creative weather front end animations 
+   
+   
+
+  // for( var i = 0; i < data.length; i++ ) {
+       //     console.log(data.main)
+
+   //}
+
+   
+    //results and output template based on the search results of the user
+
+    //var temp = data.main.temp
+    //var humid = data.main.humidity
+    //var min = data.main.temp_min
+    //var max = data.main.temp_max
+
+   //var test = document.getElementById('output');
+
+   output.innerHTML = "test data here"
 
 
+    
+   VisualWeather() 
 
-  })
-  .catch(error => console.error(error))
-
+      
 
 }
 
-//3. change background color based on weather or current forecast
-    //if weather is sunny page = yellow sun animation 
-    //if weather is cold/snowwy = snowflakes animation
-    //
+
+    
+function VisualWeather() {
 
 
-//4.display 5 day weather and content on webpage
+        document.body.style.backgroundColor = "skyblue";
+       
+
+        //icons for weather types:
+
+        //sunny
+
+        //<i class="fas fa-sun"></i>
+        //document.body.style.backgroundColor = "skyblue";
+
+        //cloudy
+
+        //<i class="fas fa-cloud"></i>
+        //document.body.style.backgroundColor = "skyblue";
 
 
+        //rain
+
+        //<i class="fas fa-cloud-showers-heavy"></i>
+
+        //snow
+
+        //<i class="far fa-snowflake"></i>
+
+        //thunderstorm
+
+        //<i class="fas fa-bolt"></i>
+      
+}
 
 
-
-
-//get search info
-
-//const rad = document.getElementById('radius').value
-//const state = document.getElementById('city_state').value
-//const city = document.getElementById('city_state').value
-//const postal = document.getElementById('zip').value
 
     
 
