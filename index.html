@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8965181dc2.js"></script>
-    <description> Basic Weather Application </description>
+
     <link rel="stylesheet" href = "style.css">
     
     <script src="app.js"></script>
@@ -24,7 +24,9 @@
 </header>
 <main>
 
-<i class = "none"; id ="weather-icon"></i>
+
+
+<h2>Search for your local weather either using your zip code or city name.</h2>
 
 <div class ="box1">
   
@@ -36,11 +38,12 @@
         <input type="text" id ="zip" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="22152">
       </div>
 
-      <div  class="input-group-prepend">
-          <span class="input-group-text"  id="inputGroup-sizing-sm" >Search by your City Name</span>
+      <div style="width: 500px; text-align: center"class="input-group input-group-sm mb-3 center">
+          <div  class="input-group-prepend">
+            <span class="input-group-text"  id="inputGroup-sizing-sm" >Search by your City's Name</span>
+          </div>
+          <input type="text" id ="city" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="Springfield">
         </div>
-        <input type="text" id ="city" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="Springfield">
-      </div>
 
       
 
@@ -59,6 +62,8 @@
 
 <div class = "results">
 
+    <i class = "none"; id ="weather-icon"></i>
+
 <p id ="output_name">  </p>
 <p id ="output_temp">  </p>
 <p id ="output_hum">  </p>
@@ -66,17 +71,14 @@
 <p id ="output_main">  </p>
 
 
-
+<br></br>
 </div>
 
 </main>
 
 
 <footer> 
-    <p>Data From Open Weather Map dot com </p>  
-    <br>    
-<a href ="##"> Created By Mike Maquera, 2019.</a>
-<br>
+    
 </footer>
 </div>
 </body>

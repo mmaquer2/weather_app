@@ -19,15 +19,29 @@ output.innerHTML = "test data here"
 function data_test() {
 
 //const state = document.getElementById('state').value
-//const city = document.getElementById('cit').value
-const postal = document.getElementById('zip').value
-alert(postal)
+
+//const postal = document.getElementById('zip').value
+
+const start = ('https://api.openweathermap.org/data/2.5/weather?q=')
+const city = document.getElementById('city').value
+const id =('&APPID=a488d31fefafdc561500bdfd1b695f5d')
+const url =(start + city + id)
+alert(url)
 
 }
 
 
-const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
+//const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
+const start = ('https://api.openweathermap.org/data/2.5/weather?q=')
+
+
+
 async function test_get() {
+
+    const start = ('https://api.openweathermap.org/data/2.5/weather?q=')
+    const city = document.getElementById('city').value
+    const id =('&APPID=a488d31fefafdc561500bdfd1b695f5d')
+    const url =(start + city + id)
 
 //const state = document.getElementById('state').value
 //const city = document.getElementById('cit').value
@@ -76,10 +90,17 @@ async function test_get() {
 
 
  function VisualWeather_test () {
-    document.body.style.backgroundColor = "skyblue";
-    document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     
 
+    if (output_temp.innerHTML > 300) {
+    document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
+    document.body.style.backgroundColor = "skyblue";
+    
+    }else {
+        document.getElementById('weather-icon').className = "fas fa-cloud fa-10x"
+        document.body.style.backgroundColor = "grey";
+
+    }
 
  }
 
