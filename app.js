@@ -1,19 +1,11 @@
 //--------------things to add ------------------//
-//location finder using gps coordinates
-//error handli
-
-//1. fetch user zip code from markup
-
-//2. fetch api data from weather map
 
 
-function output_test() {
+// -Error Handling for improper searches 
+// - convert kelvin to F or C degrees
+// - code more weather descriptions in the background style and icons 
+//
 
-var test = document.getElementById('output');
-
-output.innerHTML = "test data here"
-
-}
 
 
 function data_test() {
@@ -61,26 +53,13 @@ async function test_get() {
         console.log(data.name)
 
    
-   
-    //results and output template based on the search results of the user
-
-    //var temp = data.main.temp
-    //var humid = data.main.humidity
-    //var min = data.main.temp_min
-    //var max = data.main.temp_max
-
-   //var test = document.getElementById('output');
-
-   //output.innerHTML = "test data here"
-   output_name.innerHTML = data.name
-   output_temp.innerHTML = data.main.temp
-   output_hum.innerHTML = data.main.humidity
-   output_main.innerHTML = data.weather[0].main
+   output_name.innerHTML = 'The Weather in ' + data.name
+   output_temp.innerHTML = 'is currently ' + data.main.temp + ' degrees Kelvin'
+   output_hum.innerHTML = ('the humidity is currently ' + data.main.humidity + ' %'); 
+   output_main.innerHTML = ('right now there is currently ' + data.weather[0].main + ' in the area.')
 
      
    //activates creative weather front end animations 
-   
-
     
    VisualWeather_test() 
 
