@@ -52,6 +52,9 @@ async function test_get() {
         console.log(data.weather[0].description)
         console.log(data.name)
 
+        //convert kelvin to degrees F
+        // F = 9/5K -273.15 + 32
+
    
    output_name.innerHTML = 'The Weather in ' + data.name
    output_temp.innerHTML = 'is currently ' + data.main.temp + ' degrees Kelvin'
