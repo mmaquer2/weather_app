@@ -35,6 +35,8 @@ async function test_get() {
     const id =('&APPID=a488d31fefafdc561500bdfd1b695f5d')
     const url =(start + city + id)
 
+   
+
 //const state = document.getElementById('state').value
 //const city = document.getElementById('cit').value
 //const postal = document.getElementById('zip').value
@@ -57,9 +59,9 @@ async function test_get() {
 
    
    output_name.innerHTML = 'The Weather in ' + data.name
-   output_temp.innerHTML = 'is currently ' + data.main.temp + ' degrees Kelvin'
+   output_temp.innerHTML = 'is currently ' + data.main.temp + ' degrees F'
    output_hum.innerHTML = ('the humidity is currently ' + data.main.humidity + ' %'); 
-   output_main.innerHTML = ('right now there is currently ' + data.weather[0].main + ' in the area.')
+   output_main.innerHTML = ('right now it is ' + data.weather[0].main + ' in the area.')
 
      
    //activates creative weather front end animations 
