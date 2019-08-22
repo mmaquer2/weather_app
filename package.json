@@ -1,0 +1,10 @@
+{
+"scripts": {
+    
+    "dist": "surge --domain weathertestapp-io.surge.sh"
+  }
+
+
+
+
+}

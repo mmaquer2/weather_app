@@ -67,6 +67,15 @@ position: fixed;
     display: none;
 }
 
+.output{
+height:500px;
+display:inline-block;
+box-shadow: 10px 10px 10px 10px grey;
+padding: 50px 50px;
+background-color:white;
+margin-right:20px;
+}
+
 
 
 
