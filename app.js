@@ -24,7 +24,7 @@ alert(url)
 */
 
 //const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
-const start = ('https://api.openweathermap.org/data/2.5/weather?q=')
+
 
 
 
@@ -38,9 +38,15 @@ async function test_get() {
     const response = await fetch(url);
     const data = await response.json();
     var string = "";
-    for (i in data) {
-        
-            string +='<div class="card"> <div class="col-xs-5"><span class="name">'+data.main.temp+'</span></div><div class="col-xs-2"></div><div class="col-xs-5">'+data.main.humidity+'</div><div class = "col-xs-5">'+data.name+'</div> <div class ="">'+data.main.description+'</div>   </div><br></br>';
+    var k_temp = data.main.temp;
+    var desc = data.weather[0].description;
+    
+
+    f_temp = ((k_temp - 273.15) * 1.8 + 32).toFixed(1);
+    //convert kelvin to degrees F
+    // F = 9/5K -273.15 + 32
+
+    string ='<div class="card"> <div><span class="">'+data.name+'</span></div><div class=""></div><div class="col-xs-5">'+f_temp+' F </div><div class = "col-xs-5">'+data.main.humidity+' % </div> </div><br></br>';
              
         //console.log(data.main.temp)
       //  console.log(data.main.humidity)
@@ -48,40 +54,29 @@ async function test_get() {
        // console.log(data.weather[0].description)
        // console.log(data.name)
 
-        
-          
-          };
-            
-          document.getElementById('output').innerHTML =string    
+ document.getElementById('output').innerHTML =string    
 
-        
-        //convert kelvin to degrees F
-        // F = 9/5K -273.15 + 32
-
-
-     
-   //activates creative weather front end animations 
-    
-  // VisualWeather_test() 
+//activates creative weather front end animations 
+ VisualWeather_test(k_temp,desc) 
 
       
 
 }
 
 
- function VisualWeather_test () {
+ function VisualWeather_test (temp,desc) {
     
 
-    if (output_temp.innerHTML > 300) {
+    if (temp < 300) {
     document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     document.body.style.backgroundColor = "skyblue";
     
     }
-    else if (data.weather [0].main = "rain") {
+    else if ( temp === "rain") {
         document.body.style.backgroundColor = "lightgrey";
         document.getElementById('weather-icon').className = "fas fa-cloud-showers-heavy"
 
-    } else if (data.weather [0].main = "Clouds") {
+    } else if (desc === "Clouds") {
         document.body.style.backgroundColor = "lightgrey";
         document.getElementById('weather-icon').className = "fas fa-cloud"
     
