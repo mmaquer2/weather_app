@@ -1,31 +1,16 @@
-//--------------things to add ------------------//
-
-
-// -Error Handling for improper searches 
-// - convert kelvin to F or C degrees
-// - code more weather descriptions in the background style and icons 
-//
-
-
 /*
 function data_test() {
-
 //const state = document.getElementById('state').value
-
 //const postal = document.getElementById('zip').value
-
 const start = ('https://api.openweathermap.org/data/2.5/weather?q=')
 const city = document.getElementById('city').value
 const id =('&APPID=a488d31fefafdc561500bdfd1b695f5d')
 const url =(start + city + id)
 alert(url)
-
 }
 */
 
 //const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
-
-
 
 
 async function test_get() {
@@ -41,18 +26,16 @@ async function test_get() {
     var k_temp = data.main.temp;
     var desc = data.weather[0].description;
     
-
-    f_temp = ((k_temp - 273.15) * 1.8 + 32).toFixed(1);
     //convert kelvin to degrees F
-    // F = 9/5K -273.15 + 32
-
+    f_temp = ((k_temp - 273.15) * 1.8 + 32).toFixed(1);
+    
     string ='<div class="card"> <div><span class="">'+data.name+'</span></div><div class=""></div><div class="col-xs-5">'+f_temp+' F </div><div class = "col-xs-5">'+data.main.humidity+' % </div> </div><br></br>';
              
-        //console.log(data.main.temp)
-      //  console.log(data.main.humidity)
-       //  console.log(data.weather[0].main)
-       // console.log(data.weather[0].description)
-       // console.log(data.name)
+    //console.log(data.main.temp)
+    //  console.log(data.main.humidity)
+    //  console.log(data.weather[0].main)
+    // console.log(data.weather[0].description)
+    // console.log(data.name)
 
  document.getElementById('output').innerHTML =string    
 
@@ -66,7 +49,6 @@ async function test_get() {
 
  function VisualWeather_test (temp,desc) {
     
-
     if (temp < 300) {
     document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     document.body.style.backgroundColor = "skyblue";
@@ -88,7 +70,6 @@ async function test_get() {
 
     }
     
-
  }
 
 
@@ -144,18 +125,5 @@ async function test_get() {
   location.reload(true);
 }
 
-
-function disp() {
-
-var show = document.getElementById('results')
-if(show.style.display = 'none') {
-    show.style.display = 'block'
-}
-else if ( show.style.display = 'block' ) {
-
-    show.style.display ='none'
-}
-
-}
 
 
