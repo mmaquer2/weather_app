@@ -51,24 +51,18 @@ async function test_get() {
  function VisualWeather_test (temp,des) {
     
     if (temp < 300) {
-    document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
-    document.body.style.backgroundColor = "skyblue";
+    document.getElementById('weather-icon').className = "fas fa-cloud fa-10x"
+    document.body.style.backgroundColor = "lightgrey";
     
     }
     else if ( temp > 300) {
-        document.body.style.backgroundColor = "lightgrey";
-        document.getElementById('weather-icon').className = "fas fa-cloud-showers-heavy fa-10x"
-
-    } else if (desc === "Clouds") {
-        document.body.style.backgroundColor = "lightgrey";
-        document.getElementById('weather-icon').className = "fas fa-cloud"
-    
+        document.body.style.backgroundColor = "skyblue";
+        document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     }
     
     else {
         document.getElementById('weather-icon').className = "fas fa-cloud fa-10x"
         document.body.style.backgroundColor = "grey";
-
     }
     
  }
