@@ -39,7 +39,7 @@ body {
 form {
 
     display:inline-block;
-    background-color:  ;
+    width:auto;
     padding: 70px 50px;
     
     color:black;
@@ -62,18 +62,19 @@ position: fixed;
 
 }
 
-.res {
 
-    display: none;
-}
 
-.output{
-height:500px;
-display:inline-block;
-box-shadow: 10px 10px 10px 10px grey;
-padding: 50px 50px;
-background-color:white;
-margin-right:20px;
+
+.card {
+    height:auto;
+    width:300px;
+    display:inline-block;
+    box-shadow: 5px 5px 5px 5px grey;
+    padding: 50px 50px;
+    background-color:white;
+    margin-right:20px;
+
+
 }
 
 

@@ -7,7 +7,7 @@
 //
 
 
-
+/*
 function data_test() {
 
 //const state = document.getElementById('state').value
@@ -21,7 +21,7 @@ const url =(start + city + id)
 alert(url)
 
 }
-
+*/
 
 //const url = ('https://api.openweathermap.org/data/2.5/weather?q=Nashville&APPID=a488d31fefafdc561500bdfd1b695f5d')
 const start = ('https://api.openweathermap.org/data/2.5/weather?q=')
@@ -34,39 +34,35 @@ async function test_get() {
     const city = document.getElementById('city').value
     const id =('&APPID=a488d31fefafdc561500bdfd1b695f5d')
     const url =(start + city + id)
-
-   
-
-//const state = document.getElementById('state').value
-//const city = document.getElementById('cit').value
-//const postal = document.getElementById('zip').value
-//const city_name = document.getElementById('zip').value    
-
-
-    
+  
     const response = await fetch(url);
     const data = await response.json();
+    var string = "";
+    for (i in data) {
+        
+            string +='<div class="card"> <div class="col-xs-5"><span class="name">'+data.main.temp+'</span></div><div class="col-xs-2"></div><div class="col-xs-5">'+data.main.humidity+'</div><div class = "col-xs-5">'+data.name+'</div> <div class ="">'+data.main.description+'</div>   </div><br></br>';
+             
+        //console.log(data.main.temp)
+      //  console.log(data.main.humidity)
+       //  console.log(data.weather[0].main)
+       // console.log(data.weather[0].description)
+       // console.log(data.name)
 
-        console.log(data.main.temp)
-        console.log(data.main.humidity)
+        
+          
+          };
+            
+          document.getElementById('output').innerHTML =string    
 
-        console.log(data.weather[0].main)
-        console.log(data.weather[0].description)
-        console.log(data.name)
-
+        
         //convert kelvin to degrees F
         // F = 9/5K -273.15 + 32
 
-   
-   output_name.innerHTML = 'The Weather in ' + data.name
-   output_temp.innerHTML = 'is currently ' + data.main.temp + ' degrees F'
-   output_hum.innerHTML = ('the humidity is currently ' + data.main.humidity + ' %'); 
-   output_main.innerHTML = ('right now it is ' + data.weather[0].main + ' in the area.')
 
      
    //activates creative weather front end animations 
     
-   VisualWeather_test() 
+  // VisualWeather_test() 
 
       
 
@@ -80,11 +76,23 @@ async function test_get() {
     document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     document.body.style.backgroundColor = "skyblue";
     
-    }else {
+    }
+    else if (data.weather [0].main = "rain") {
+        document.body.style.backgroundColor = "lightgrey";
+        document.getElementById('weather-icon').className = "fas fa-cloud-showers-heavy"
+
+    } else if (data.weather [0].main = "Clouds") {
+        document.body.style.backgroundColor = "lightgrey";
+        document.getElementById('weather-icon').className = "fas fa-cloud"
+    
+    }
+    
+    else {
         document.getElementById('weather-icon').className = "fas fa-cloud fa-10x"
         document.body.style.backgroundColor = "grey";
 
     }
+    
 
  }
 

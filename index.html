@@ -31,16 +31,10 @@
 <div class ="box1">
   
 <form> 
-<div style="width: 500px; text-align: center"class="input-group input-group-sm mb-3 center">
-        <div  class="input-group-prepend">
-          <span class="input-group-text"  id="inputGroup-sizing-sm" >Search by your 5 digit Zip Code</span>
-        </div>
-        <input type="text" id ="zip" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="22152">
-      </div>
 
       <div style="width: 500px; text-align: center"class="input-group input-group-sm mb-3 center">
           <div  class="input-group-prepend">
-            <span class="input-group-text"  id="inputGroup-sizing-sm" >Search by your City's Name</span>
+            <span class="input-group-text"  id="inputGroup-sizing-sm" >Enter Your City's Name: </span>
           </div>
           <input type="text" id ="city" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"placeholder="Springfield">
         </div>
@@ -51,7 +45,7 @@
           <button type ="button" class="btn btn-primary" onclick="test_get()"> Search</button>
           <br>
           <br>
-          <button class="btn btn-primary" type ="button" onclick="data_test()"> Try a New Search </button>
+          <button class="btn btn-primary" type ="button" onclick="reset()"> Try a New Search </button>
         </div>
         
      
@@ -59,19 +53,12 @@
         </div>
 <br>
 
-
-<div class = "output">
-
-    <i class = "none"; id ="weather-icon"></i>
-
-<p id ="output_name">  </p>
-<p id ="output_temp">  </p>
-<p id ="output_hum">  </p>
-<p id ="output_des">  </p>
-<p id ="output_main">  </p>
-
-
+<i class = "none"; id ="weather-icon"></i>
 <br></br>
+<div id = "output"></div>
+
+
+
 </div>
 
 </main>
