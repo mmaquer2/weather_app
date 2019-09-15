@@ -29,12 +29,13 @@ async function test_get() {
     //convert kelvin to degrees F
     f_temp = ((k_temp - 273.15) * 1.8 + 32).toFixed(1);
     
-    string ='<div class="card"> <div><span class="">'+data.name+'</span></div><div class=""></div><div class="col-xs-5">'+f_temp+' F </div><div class = "col-xs-5">'+data.main.humidity+' % </div> </div><br></br>';
-             
+    string ='<div class="card"> <div><span class=""> City: '+data.name+'</span></div><div class=""></div><div class="col-xs-5"> Currently is: '+f_temp+' F </div><div>'+data.main.humidity+' % Humidity </div> <div> '+data.weather[0].description+'</div> </div><br></br>';
+    console.log(data.weather[0].main)
     //console.log(data.main.temp)
     //  console.log(data.main.humidity)
     //  console.log(data.weather[0].main)
-    // console.log(data.weather[0].description)
+     console.log(data.weather[0].description)
+     console.log(data.weather[0].icon)
     // console.log(data.name)
 
  document.getElementById('output').innerHTML =string    
@@ -47,16 +48,16 @@ async function test_get() {
 }
 
 
- function VisualWeather_test (temp,desc) {
+ function VisualWeather_test (temp,des) {
     
     if (temp < 300) {
     document.getElementById('weather-icon').className = "fas fa-sun fa-10x"
     document.body.style.backgroundColor = "skyblue";
     
     }
-    else if ( temp === "rain") {
+    else if ( temp > 300) {
         document.body.style.backgroundColor = "lightgrey";
-        document.getElementById('weather-icon').className = "fas fa-cloud-showers-heavy"
+        document.getElementById('weather-icon').className = "fas fa-cloud-showers-heavy fa-10x"
 
     } else if (desc === "Clouds") {
         document.body.style.backgroundColor = "lightgrey";
